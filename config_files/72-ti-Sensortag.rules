@@ -1,0 +1,6 @@
+SUBSYSTEM=="tty", DRIVERS=="cdc_acm", ATTRS{bInterfaceNumber}!="00", GOTO="DebuggerEND"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0451", ATTRS{idProduct}=="bef3", ATTRS{serial}=="SLIP", SYMLINK+="SENSORTAG_SLIP"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0451", ATTRS{idProduct}=="bef3", ATTRS{serial}=="SNIFF", SYMLINK+="SENSORTAG_SNIFF"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0451", ATTRS{idProduct}=="bef3", ATTRS{serial}=="PROG1", SYMLINK+="SENSORTAG_PROG1"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0451", ATTRS{idProduct}=="bef3", ATTRS{serial}=="PROG2", SYMLINK+="SENSORTAG_PROG2"
+LABEL="DebuggerEND"
